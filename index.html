@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Milgron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bone: '#F5F1E8',
+                        charcoal: '#2C2C2C'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        a { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-bone text-charcoal font-serif">
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center">
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 fade-in">Tomás Milgron</h1>
+            <nav class="space-x-8 fade-in delay-1">
+                <a href="#blog" class="text-xl hover:opacity-60">Blog</a>
+                <a href="#contacto" class="text-xl hover:opacity-60">Contacto</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="max-w-3xl mx-auto px-6 py-20 fade-in delay-2">
+        <h2 class="text-4xl font-bold mb-12">Blog</h2>
+        
+        <article class="mb-16 pb-16 border-b border-charcoal/10">
+            <a href="#post-1" class="block group">
+                <time class="text-sm opacity-60 mb-2 block">15 de marzo, 2024</time>
+                <h3 class="text-3xl font-bold mb-4 group-hover:opacity-60">Reflexiones sobre la escritura</h3>
+                <p class="text-lg leading-relaxed opacity-80">
+                    La escritura es un acto de resistencia silenciosa. En cada palabra elegida, 
+                    en cada pausa calculada, existe una decisión consciente de dar forma al caos 
+                    interior. No se trata de encontrar las palabras perfectas, sino de permitir 
+                    que las palabras imperfectas revelen verdades inesperadas.
+                </p>
+                <span class="inline-block mt-4 text-sm opacity-60 group-hover:opacity-100">Leer más →</span>
+            </a>
+        </article>
+
+        <article class="mb-16 pb-16 border-b border-charcoal/10">
+            <a href="#post-2" class="block group">
+                <time class="text-sm opacity-60 mb-2 block">8 de marzo, 2024</time>
+                <h3 class="text-3xl font-bold mb-4 group-hover:opacity-60">El silencio entre líneas</h3>
+                <p class="text-lg leading-relaxed opacity-80">
+                    Lo que no se dice es tan importante como lo que se escribe. El espacio en blanco 
+                    no es vacío, es potencial. Es el lugar donde el lector respira, donde la imaginación 
+                    toma el control y completa lo que las palabras apenas sugieren.
+                </p>
+                <span class="inline-block mt-4 text-sm opacity-60 group-hover:opacity-100">Leer más →</span>
+            </a>
+        </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="max-w-3xl mx-auto px-6 py-20 fade-in delay-3">
+        <h2 class="text-4xl font-bold mb-8">Contacto</h2>
+        <p class="text-xl mb-6 opacity-80">Para consultas o colaboraciones:</p>
+        <a href="mailto:tomas@milgron.com" class="text-2xl hover:opacity-60 underline decoration-1 underline-offset-4">
+            tomas@milgron.com
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-3xl mx-auto px-6 py-12 mt-20 border-t border-charcoal/10">
+        <p class="text-sm opacity-60 text-center">
+            © 2024 Tomás Milgron. Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
